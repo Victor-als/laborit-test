@@ -2,12 +2,11 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { renderHook, act, waitFor } from '@testing-library/react'
 import { useChat } from '../hooks/useChat'
 
-// Mock deve usar o caminho exato do módulo
 vi.mock('../services/chat', () => ({
   sendMessageToAI: vi.fn(),
 }))
 
-// Importa depois do mock
+
 const { sendMessageToAI } = await import('../services/chat')
 const mockSendMessageToAI = vi.mocked(sendMessageToAI)
 

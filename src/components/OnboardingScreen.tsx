@@ -36,7 +36,7 @@ export function OnboardingScreen({ goTo }: Props) {
     if (current < SLIDES.length - 1) {
       setCurrent((c) => c + 1);
     } else {
-      finishOnboarding(); // 🔥 aqui
+      finishOnboarding(); 
     }
   }
 
@@ -51,14 +51,13 @@ export function OnboardingScreen({ goTo }: Props) {
       {/* Skip */}
       <div className="flex justify-end px-6 pt-6 pb-2 shrink-0">
         <button
-          onClick={finishOnboarding} // 🔥 aqui também
+          onClick={finishOnboarding}
           className="text-white font-body font-medium text-base hover:opacity-70 transition-opacity"
         >
           Skip
         </button>
       </div>
 
-      {/* 🔥 IMAGEM COM BLUR ATRÁS */}
       <div className="flex justify-center items-center relative">
         <img
           src={onboardingImageBlur}
@@ -73,7 +72,6 @@ export function OnboardingScreen({ goTo }: Props) {
         />
       </div>
 
-      {/* Dots */}
       <div className="flex justify-center gap-2 mt-6 shrink-0">
         {SLIDES.map((_, i) => (
           <button
@@ -89,7 +87,6 @@ export function OnboardingScreen({ goTo }: Props) {
         ))}
       </div>
 
-      {/* Text */}
       <div className="flex-1 px-6 pt-6 pb-2 text-center" key={current}>
         <h2 className="font-display font-bold text-white text-[28px] leading-tight mb-3 animate-fade-up">
           {slide.title}
@@ -107,7 +104,6 @@ export function OnboardingScreen({ goTo }: Props) {
         </p>
       </div>
 
-      {/* Navigation */}
       <div className="pb-12 pt-4 flex justify-center shrink-0">
         <div className="flex flex-row items-center bg-[#1c1c1c] rounded-[20px]">
           <button

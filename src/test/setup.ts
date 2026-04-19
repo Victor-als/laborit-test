@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom'
+import { vi } from 'vitest'
 
 // Mock assets
 vi.mock('../assets/Send.svg', () => ({ default: 'send.svg' }))

@@ -45,7 +45,6 @@ export function ChatHeader({ goTo, onClear }: Props) {
         )}
       </div>
 
-      {/* backdrop to close menu */}
       {menuOpen && (
         <div
           className="fixed inset-0 z-40"

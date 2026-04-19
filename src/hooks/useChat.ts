@@ -74,7 +74,6 @@ export function useChat() {
     const index = messages.findIndex((m) => m.id === id)
     if (index === -1) return
 
-    // Keep messages up to and including edited one, update its content
     const updated = messages.slice(0, index + 1).map((m, i) =>
       i === index ? { ...m, content: newContent } : m
     )
