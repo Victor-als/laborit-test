@@ -1,4 +1,4 @@
-import logoSvg from "../assets/logo.png";
+import logoSvg from "../assets/Logo.png";
 
 export function SplashScreen() {
   return (
